@@ -1,0 +1,361 @@
+{
+    "states": [
+        {
+            "name": "Andhra Pradesh",
+            "population": 53903393,
+            "area": 160205,
+            "capital": "Amaravati",
+            "neighbours": [
+                "Odisha",
+                "Chhattisgarh",
+                "Telangana",
+                "Karnataka",
+                "Tamil Nadu"
+            ]
+        },
+        {
+            "name": "Arunachal Pradesh",
+            "population": 1570458,
+            "area": 83743,
+            "capital": "Itanagar",
+            "neighbours": [
+                "Assam",
+                "Nagaland"
+            ]
+        },
+        {
+            "name": "Assam",
+            "population": 35607039,
+            "area": 78438,
+            "capital": "Dispur",
+            "neighbours": [
+                "Arunachal Pradesh",
+                "Nagaland",
+                "Manipur",
+                "Mizoram",
+                "Tripura",
+                "Meghalaya",
+                "West Bengal"
+            ]
+        },
+        {
+            "name": "Bihar",
+            "population": 124799926,
+            "area": 94163,
+            "capital": "Patna",
+            "neighbours": [
+                "Uttar Pradesh",
+                "Jharkhand",
+                "West Bengal",
+                "Odisha"
+            ]
+        },
+        {
+            "name": "Chhattisgarh",
+            "population": 29436231,
+            "area": 135191,
+            "capital": "Raipur",
+            "neighbours": [
+                "Uttar Pradesh",
+                "Jharkhand",
+                "Odisha",
+                "Andhra Pradesh",
+                "Maharashtra",
+                "Madhya Pradesh"
+            ]
+        },
+        {
+            "name": "Goa",
+            "population": 1540000,
+            "area": 3702,
+            "capital": "Panaji",
+            "neighbours": [
+                "Maharashtra",
+                "Karnataka"
+            ]
+        },
+        {
+            "name": "Gujarat",
+            "population": 63872399,
+            "area": 196024,
+            "capital": "Gandhinagar",
+            "neighbours": [
+                "Rajasthan",
+                "Madhya Pradesh",
+                "Maharashtra",
+                "Dadra and Nagar Haveli and Daman and Diu"
+            ]
+        },
+        {
+            "name": "Haryana",
+            "population": 28941133,
+            "area": 44212,
+            "capital": "Chandigarh",
+            "neighbours": [
+                "Himachal Pradesh",
+                "Punjab",
+                "Rajasthan",
+                "Uttar Pradesh",
+                "Delhi"
+            ]
+        },
+        {
+            "name": "Himachal Pradesh",
+            "population": 7457200,
+            "area": 55673,
+            "capital": "Shimla",
+            "neighbours": [
+                "Jammu and Kashmir",
+                "Punjab",
+                "Uttarakhand",
+                "Haryana"
+            ]
+        },
+        {
+            "name": "Jammu and Kashmir",
+            "population": 13203073,
+            "area": 222236,
+            "capital": "Srinagar",
+            "neighbours": [
+                "Punjab",
+                "Himachal Pradesh",
+                "Uttarakhand",
+                "Ladakh"
+            ]
+        },
+        {
+            "name": "Jharkhand",
+            "population": 38593948,
+            "area": 79714,
+            "capital": "Ranchi",
+            "neighbours": [
+                "Odisha",
+                "West Bengal",
+                "Bihar",
+                "Uttar Pradesh",
+                "Chhattisgarh"
+            ]
+        },
+        {
+            "name": "Karnataka",
+            "population": 67562686,
+            "area": 191791,
+            "capital": "Bengaluru",
+            "neighbours": [
+                "Goa",
+                "Maharashtra",
+                "Telangana",
+                "Kerala",
+                "Tamil Nadu",
+                "Andhra Pradesh"
+            ]
+        },
+        {
+            "name": "Kerala",
+            "population": 36404858,
+            "area": 38852,
+            "capital": "Thiruvananthapuram",
+            "neighbours": [
+                "Tamil Nadu",
+                "Karnataka"
+            ]
+        },
+        {
+            "name": "Ladakh",
+            "population": 274000,
+            "area": 59146,
+            "capital": "Leh",
+            "neighbours": [
+                "Jammu and Kashmir"
+            ]
+        },
+        {
+            "name": "Madhya Pradesh",
+            "population": 85358965,
+            "area": 308252,
+            "capital": "Bhopal",
+            "neighbours": [
+                "Rajasthan",
+                "Uttar Pradesh",
+                "Chhattisgarh",
+                "Maharashtra",
+                "Gujarat"
+            ]
+        },
+        {
+            "name": "Maharashtra",
+            "population": 123144223,
+            "area": 307713,
+            "capital": "Mumbai",
+            "neighbours": [
+                "Gujarat",
+                "Madhya Pradesh",
+                "Chhattisgarh",
+                "Telangana",
+                "Karnataka",
+                "Goa"
+            ]
+        },
+        {
+            "name": "Manipur",
+            "population": 3108369,
+            "area": 22327,
+            "capital": "Imphal",
+            "neighbours": [
+                "Nagaland",
+                "Mizoram",
+                "Assam"
+            ]
+        },
+        {
+            "name": "Meghalaya",
+            "population": 3366710,
+            "area": 22429,
+            "capital": "Shillong",
+            "neighbours": [
+                "Assam"
+            ]
+        },
+        {
+            "name": "Mizoram",
+            "population": 1239244,
+            "area": 21081,
+            "capital": "Aizawl",
+            "neighbours": [
+                "Assam",
+                "Manipur",
+                "Tripura"
+            ]
+        },
+        {
+            "name": "Nagaland",
+            "population": 2249695,
+            "area": 16579,
+            "capital": "Kohima",
+            "neighbours": [
+                "Manipur",
+                "Assam",
+                "Arunachal Pradesh",
+                "Myanmar"
+            ]
+        },
+        {
+            "name": "Odisha",
+            "population": 43771087,
+            "area": 155707,
+            "capital": "Bhubaneswar",
+            "neighbours": [
+                "Jharkhand",
+                "West Bengal",
+                "Chhattisgarh",
+                "Andhra Pradesh"
+            ]
+        },
+        {
+            "name": "Punjab",
+            "population": 30355185,
+            "area": 50362,
+            "capital": "Chandigarh",
+            "neighbours": [
+                "Jammu and Kashmir",
+                "Himachal Pradesh",
+                "Haryana",
+                "Rajasthan"
+            ]
+        },
+        {
+            "name": "Rajasthan",
+            "population": 81032689,
+            "area": 342239,
+            "capital": "Jaipur",
+            "neighbours": [
+                "Punjab",
+                "Haryana",
+                "Uttar Pradesh",
+                "Madhya Pradesh",
+                "Gujarat"
+            ]
+        },
+        {
+            "name": "Sikkim",
+            "population": 690251,
+            "area": 7096,
+            "capital": "Gangtok",
+            "neighbours": [
+                "West Bengal"
+            ]
+        },
+        {
+            "name": "Tamil Nadu",
+            "population": 75695000,
+            "area": 130060,
+            "capital": "Chennai",
+            "neighbours": [
+                "Kerala",
+                "Karnataka",
+                "Andhra Pradesh",
+                "Puducherry"
+            ]
+        },
+        {
+            "name": "Telangana",
+            "population": 39362732,
+            "area": 114840,
+            "capital": "Hyderabad",
+            "neighbours": [
+                "Maharashtra",
+                "Chhattisgarh",
+                "Andhra Pradesh",
+                "Karnataka"
+            ]
+        },
+        {
+            "name": "Tripura",
+            "population": 4166717,
+            "area": 10486,
+            "capital": "Agartala",
+            "neighbours": [
+                "Assam",
+                "Mizoram"
+            ]
+        },
+        {
+            "name": "Uttar Pradesh",
+            "population": 237882725,
+            "area": 243290,
+            "capital": "Lucknow",
+            "neighbours": [
+                "Haryana",
+                "Delhi",
+                "Rajasthan",
+                "Madhya Pradesh",
+                "Chhattisgarh",
+                "Jharkhand",
+                "Bihar",
+                "Uttarakhand"
+            ]
+        },
+        {
+            "name": "Uttarakhand",
+            "population": 11250858,
+            "area": 53483,
+            "capital": "Dehradun",
+            "neighbours": [
+                "Himachal Pradesh",
+                "Uttar Pradesh"
+            ]
+        },
+        {
+            "name": "West Bengal",
+            "population": 104099452,
+            "area": 88752,
+            "capital": "Kolkata",
+            "neighbours": [
+                "Sikkim",
+                "Jharkhand",
+                "Odisha",
+                "Bihar"
+            ]
+        }
+    ]   
+}
