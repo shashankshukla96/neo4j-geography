@@ -1,6 +1,6 @@
 # Travel India with Neo4j
 
-One day I was in call with my friend and we were discussing how many states do we have to cross if we have to travel from Kanpur to Pune. For that I went to google maps and found the result. Then I thought, how google maps works in the backend and shows us this result. So I tried to use Graphs in Neo4j to create a simple application for it.
+One day I was in call with my friend and we were discussing how many states do we have to cross if we have to travel from Kanpur to Pune. For that I went to google maps and found the result. Then I thought, how google maps works in the backend and shows us this result. So I tried to use Graphs in Neo4j to see how we can create a simple navigation system.
 
 
 ## The Graph
