@@ -1,6 +1,6 @@
 # Travel India with Neo4j
 
-One day I was in call with my friend and we were discussing how many states do we have to cross if we have to travel from Lucknow to Chennai. For that I went to google maps and found the result. Then I thought, how google maps works in the backend and shows us this result. So I tried to use Graphs in Neo4j to create a simple application for it.
+One day I was in call with my friend and we were discussing how many states do we have to cross if we have to travel from Kanpur to Pune. For that I went to google maps and found the result. Then I thought, how google maps works in the backend and shows us this result. So I tried to use Graphs in Neo4j to create a simple application for it.
 
 
 ## The Graph
@@ -54,7 +54,7 @@ CREATE (capital:City {name: v.capital})
 CREATE (s)<-[:IS_CAPITAL_OF]-(capital)
 FOREACH (n IN v.neighbours |
   MERGE (neighbour:State {name: n})
-  MERGE (s)-[:IS_NEIGHBOUR_OF]-(neighbour)
+  MERGE (s)<-[:IS_NEIGHBOUR_OF]->(neighbour)
 )
 
 FOREACH (cityName IN v.cities |
@@ -114,3 +114,38 @@ LIMIT 5
 ```
 
 ![Top 5 Most connected States](graph-3.png)
+
+Now, let's see if we can duplicate the same result from graph for **Uttar Pradesh**.
+
+```
+MATCH (state1:State)-[r:IS_NEIGHBOUR_OF]-(state2:State)
+WHERE state1.name = "Uttar Pradesh"
+RETURN *
+```
+
+![Uttar Pradesh and its Neighbours](graph-4.png)
+
+### How to reach from one city to another
+
+Now let's come to our final goal, and see how we can create a navigation path from one city/state to another
+
+For first example, we will see if how we can reach Pune from Kanpur and how many state we will need to cross.
+
+```
+MATCH (c1:City {name: "Kanpur"})
+MATCH (c2: City{name: "Pune"})
+MATCH p=shortestPath((c1)-[*]-(c2)) 
+RETURN p
+```
+
+![Shortest Path from Kanpur to Pune](graph-5.png)
+
+So, there we have found our result, to go reach Pune from Kanpur, we will have to go through Uttar Pradesh, Madhya Pradesh and Maharashtra.
+
+**shortestPath()** will return the shortest from c1 and c2 nodes, if there are more than one paths available, in that case also it will one path. Now if we add distances between the states and cities and we can also use some graph data science algorithms like **Dikshtra's algorithm** to compute the shortest path with the distance as weights on the edges.
+
+ 
+## Conclusion
+
+In this post, we were able to create some cypher queries to get from insights from Indian States and also able to understand how we can create a simple map application. Just add more data points as nodes and distances between them and we can create a full fledged navigation application.
+
