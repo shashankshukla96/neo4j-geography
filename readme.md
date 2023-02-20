@@ -115,6 +115,18 @@ LIMIT 5
 
 ![Top 5 Most connected States](graph-3.png)
 
+We can do the same operation by finding out the degree of each state node.
+The degree of a node is defined by the number of edges coming in and going out of that node. If we can find out the number of ```"IS_NEIGHBOUR_OF"``` edges from any particular state, then it will be same as our above output. We can use ```neo4j's apoc library``` for this.
+ 
+```
+MATCH (s:State) 
+RETURN s.name, apoc.node.degree(s, "IS_NEIGHBOUR_OF") as neighbours
+ORDER BY neighbours DESC
+LIMIT 5
+```
+
+![Top 5 Most connected States](graph-6.png)
+
 Now, let's see if we can duplicate the same result from graph for **Uttar Pradesh**.
 
 ```
@@ -124,6 +136,8 @@ RETURN *
 ```
 
 ![Uttar Pradesh and its Neighbours](graph-4.png)
+
+
 
 ### How to reach from one city to another
 
@@ -144,6 +158,34 @@ So, there we have found our result, to go reach Pune from Kanpur, we will have t
 
 **shortestPath()** will return the shortest from c1 and c2 nodes, if there are more than one paths available, in that case also it will one path. Now if we add distances between the states and cities and we can also use some graph data science algorithms like **Dikshtra's algorithm** to compute the shortest path with the distance as weights on the edges.
 
+### Working with Hops
+
+A hop is defined as going from one node to another using any relationship.
+
+Now, we can easily find out which states are immediate neighbours of "Uttar Pradesh" with this following query.
+
+```
+MATCH (state1:State)-[r:IS_NEIGHBOUR_OF]-(state2:State)
+WHERE state1.name = "Uttar Pradesh"
+RETURN *
+```
+
+![Uttar Pradesh and its Neighbours](graph-4.png)
+
+But how can we find out the 2nd or 3rd neighbouring states of "Uttar Pradesh",
+to do this we can use `apoc function` `apoc.neighbours.athop` which finds the neighbourhood at specific hop count.
+
+```
+MATCH (s:State{name: "Uttar Pradesh"})
+CALL apoc.neighbors.athop(s, "IS_NEIGHBOUR_OF", 2)
+YIELD node
+RETURN node.name
+```
+![Uttar Pradesh and its 2nd Neighbours](graph-7.png)
+
+**Note:** With this approach if we have a Social Network like linkedin, then we can easily observe how Linkedin shows who is someone's immediate friend (Level 1 connection), or a friend of friend (Level 2 connection) and so on. 
+
+Another application of this could be if we have a dataset of all the flight plans, then we can calculate the flight paths from Point A to Point B, in number of stops. e.g. we can filter out direct flights from A to B, or from A to B with one stop in between or more stops in between. 
  
 ## Conclusion
 
